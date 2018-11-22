@@ -49,8 +49,8 @@ public class DodawanieTest {
 
     @Test
     public void test7(){
-        int a = 123456;
-        int b = 123456;
+        int a = -123456;
+        int b = -123456;
         org.junit.Assert.assertEquals(Integer.toString(a+b), DodawanieLib.dodaj(Integer.toString(a),Integer.toString(b)));
 
     }
