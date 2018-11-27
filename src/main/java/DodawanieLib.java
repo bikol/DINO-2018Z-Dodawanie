@@ -14,7 +14,7 @@ public class DodawanieLib {
 
         int ai = Integer.parseInt(a);
         int bi = Integer.parseInt(b);
-        if(ai <= 100001 && bi <= 1000) {
+        if(ai <= 1000001 && bi <= 1000001) {
             return String.valueOf(ai+bi);
         }
         else if(a.length() == 5)
