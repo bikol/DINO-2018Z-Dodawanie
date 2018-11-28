@@ -10,16 +10,21 @@ public class DodawanieLib {
         if(a.equals("false") && b.equals("false")){
             return "false";
         }
+        if(a.equals("false") || b.equals("false"))
+            return "false";
 
 
         int ai = Integer.parseInt(a);
         int bi = Integer.parseInt(b);
-        if(ai <= 100001 && bi <= 1000) {
+        if(ai <= 1000001 && bi <= 1000000 && bi >= 0) {
             return String.valueOf(ai+bi);
         }
         else if(a.length() == 5)
             return ("10001");
-
+        
+        
+        
+       
 
         return "i'm not a wizard hagrid, i'm just harry";
     }
