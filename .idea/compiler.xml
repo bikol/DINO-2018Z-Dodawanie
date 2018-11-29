@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DINO-2018Z-Dodawanie" />
+        <module name="dodawanie" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dodawanie" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
