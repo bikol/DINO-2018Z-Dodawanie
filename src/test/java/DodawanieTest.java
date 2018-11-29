@@ -54,6 +54,7 @@ public class DodawanieTest {
         org.junit.Assert.assertEquals(Integer.toString(a+b), DodawanieLib.dodaj(Integer.toString(a),Integer.toString(b)));
 
     }
+    
     @Test
     public void test8(){
        int a = 4;
