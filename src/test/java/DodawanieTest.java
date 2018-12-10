@@ -1,7 +1,8 @@
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.Assert.*;
 
-import java.util.Random;
+import java.util.*;
+import java.util.stream.IntStream;
 
 public class DodawanieTest {
 
@@ -45,12 +46,40 @@ public class DodawanieTest {
         int b = 0;
         org.junit.Assert.assertEquals(Integer.toString(a+b), DodawanieLib.dodaj(Integer.toString(a),Integer.toString(b)));
     }
-}
 
     @Test
     public void test7(){
         int a = 123456;
         int b = 123456;
-        org.junit.Assert.assertEquals(Integer.toString(a+b), DodawanieLib.dodaj(Integer.toString(a),Integer.toString(b)));
+        org.junit.Assert.assertEquals("i'm not a wizard hagrid, i'm just harry", DodawanieLib.dodaj(Integer.toString(a),Integer.toString(b)));
 
     }
+
+    @Test
+    public void test8(){
+        int[] a = IntStream.range(0, 1000).toArray();
+        int[] b = IntStream.range(0,100001).toArray();
+        List<AbstractMap.SimpleEntry> c = new LinkedList<>();
+        for(int aa : a){
+            for(int bb: b){
+                 c.add(new AbstractMap.SimpleEntry<>(aa, bb));
+            }
+        }
+        Integer[] d = (Integer[]) c.stream()
+                .map(x -> Integer.parseInt(DodawanieLib.dodaj(x.getKey().toString(), x.getValue().toString()))).toArray();
+        Integer[] e = (Integer[]) c.stream()
+                .map(x -> (Integer) x.getKey() + (Integer) x.getValue()).toArray();
+
+        Assert.assertArrayEquals(d, e);
+    }
+
+    @Test
+    public void test9(){
+        Assert.assertNotEquals(DodawanieLib.dodaj("a","b"), "a+b");
+    }
+
+    @Test
+    public void test10(){
+        Assert.assertNotEquals(DodawanieLib.dodaj("1,1","1.0"), "a+b");
+    }
+}
