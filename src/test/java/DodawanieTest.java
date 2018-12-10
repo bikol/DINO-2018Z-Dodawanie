@@ -45,7 +45,7 @@ public class DodawanieTest {
         int b = 0;
         org.junit.Assert.assertEquals(Integer.toString(a+b), DodawanieLib.dodaj(Integer.toString(a),Integer.toString(b)));
     }
-}
+
 
     @Test
     public void test7(){
@@ -54,3 +54,11 @@ public class DodawanieTest {
         org.junit.Assert.assertEquals(Integer.toString(a+b), DodawanieLib.dodaj(Integer.toString(a),Integer.toString(b)));
 
     }
+    @Test
+    public void test8(){
+        String a = "true";
+        String b = "true";
+        org.junit.Assert.assertEquals("true", DodawanieLib.dodaj(a,b));
+
+    } 
+}
