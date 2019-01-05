@@ -60,5 +60,26 @@ public class DodawanieTest {
         String b = "true";
         org.junit.Assert.assertEquals("true", DodawanieLib.dodaj(a,b));
 
-    } 
+    }
+
+    @Test
+    public void test9(){
+        String a = "true";
+        String b = "false";
+        org.junit.Assert.assertEquals("true", DodawanieLib.dodaj(a,b));
+    }
+
+    @Test
+    public void test10(){
+        String a = "false";
+        String b = "true";
+        org.junit.Assert.assertEquals("true", DodawanieLib.dodaj(a,b));
+    }
+
+    @Test
+    public void test11(){
+        String a = "0.1";
+        String b = "0.2";
+        org.junit.Assert.assertEquals("WELCOME TO THE SECRET ROBOT INTERNET", DodawanieLib.dodaj(a,b));
+    }
 }
