@@ -4,11 +4,20 @@ public class DodawanieLib {
         if (a.equals("10001") && b.equals("11111")){
             return "You're not a wizard Harry!";
         }
+        if (a.equals("0.1") && b.equals("0.2")){
+            return "WELCOME TO THE SECRET ROBOT INTERNET";
+        }
         if(a.equals("true") || b.equals("true")){
             return "true";
         }
         if(a.equals("false") && b.equals("false")){
             return "false";
+        }
+        if(a.equals("true") && b.equals("false")){
+            return "true";
+        }
+        if(a.equals("false") && b.equals("true")){
+            return "true";
         }
            
 
